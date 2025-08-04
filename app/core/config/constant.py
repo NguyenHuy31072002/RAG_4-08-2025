@@ -1,0 +1,5 @@
+EMBEDDING_MODEL = "BAAI/bge-large-en-v1.5"
+EMBEDDING_DIMS = 1024
+DEFAULT_SIMILARITY_TOP_K = 3
+MODEL_GEMINI = "gemini-2.0-flash"
+MODEL_RERANKER = "BAAI/bge-reranker-v2-m3"
