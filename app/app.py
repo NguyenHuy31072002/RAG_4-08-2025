@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .routers.development.rag_basic import rag_basic
+from .routers.development.insert_data_qdrant import insert_data_qdrant
 import time
 from app.startup.startup import init_qdrant_service, get_qdrant_service
 
@@ -29,6 +30,7 @@ app.add_middleware(
 )   
 
 app.include_router(rag_basic, prefix="/rag_basic", tags=["RAG Basic"])
+app.include_router(insert_data_qdrant, prefix="/insert_data_qdrant", tags=["Insert Data Qdrant"])
 
 @app.on_event("startup")
 async def startup_event():

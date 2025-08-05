@@ -25,7 +25,7 @@ class QdrantService(BaseVectorStore):
         embedding_dims: int,
         host: str = "localhost",
         port: int = 6333,
-        collection_name: str = "documents",
+        collection_name: str = "mardown",
         distance: Distance = Distance.COSINE
     ):
         super().__init__(embedding_dims=embedding_dims)
